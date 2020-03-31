@@ -23,18 +23,6 @@ public class MessageUpdateTabName extends MessageToClient
 	private ITextComponent displayName;
 	private boolean afk, rec;
 
-	public MessageUpdateTabName()
-	{
-	}
-
-	public MessageUpdateTabName(EntityPlayerMP player)
-	{
-		playerId = player.getUniqueID();
-		displayName = player.getDisplayName();
-		afk = (System.currentTimeMillis() - player.getLastActiveTime()) >= FTBUtilitiesConfig.afk.getNotificationTimer();
-		rec = NBTUtils.getPersistedData(player, false).getBoolean("recording");
-	}
-
 	@Override
 	public NetworkWrapper getWrapper()
 	{

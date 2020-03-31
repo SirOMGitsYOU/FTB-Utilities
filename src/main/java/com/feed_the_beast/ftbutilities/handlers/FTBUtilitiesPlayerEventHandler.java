@@ -82,13 +82,10 @@ public class FTBUtilitiesPlayerEventHandler
 			ClaimedChunks.instance.markDirty();
 		}
 
-		new MessageUpdateTabName(player).sendToAll();
-
 		for (EntityPlayerMP player1 : player.server.getPlayerList().getPlayers())
 		{
 			if (player1 != player)
 			{
-				new MessageUpdateTabName(player1).sendTo(player);
 			}
 		}
 	}

@@ -52,7 +52,5 @@ public class CmdNick extends CmdBase
 
 			player.getPlayer().sendStatusMessage(FTBUtilities.lang(player.getPlayer(), "ftbutilities.lang.nickname_changed", name), true);
 		}
-
-		new MessageUpdateTabName(player.getPlayer()).sendToAll();
 	}
 }

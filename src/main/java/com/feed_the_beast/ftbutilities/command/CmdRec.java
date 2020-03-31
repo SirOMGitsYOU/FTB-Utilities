@@ -53,6 +53,5 @@ public class CmdRec extends CmdBase
 		}
 
 		Universe.get().getPlayer(player).clearCache();
-		new MessageUpdateTabName(player).sendToAll();
 	}
 }
